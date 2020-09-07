@@ -35,7 +35,7 @@ public class Baloon extends Aircraft implements Flyable {
                 WriteToTXT.getWriteToTXT().writeTXT("Tower  says: Baloon#" + this.name + "(" + this.id + ")" + " UNREGISTERED FROM THE WEATHER TOWER.");
                 break;
             default:
-                WriteToTXT.getWriteToTXT().writeTXT("Baloon#" + this.name + "(" + this.id + "): I CANT CONNECT THE WEATHER TOWER");
+                WriteToTXT.getWriteToTXT().writeTXT("Baloon#" + this.name + "(" + this.id + "): CANT CONNECT THE WEATHER TOWER");
                 break;
         }
         if (this.coordinates.getHeight() <= 0)

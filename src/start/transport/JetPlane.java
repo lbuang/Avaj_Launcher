@@ -19,33 +19,33 @@ public class JetPlane extends Aircraft implements Flyable
                 this.coordinates.setHeight(this.coordinates.getHeight() + 2);
                 if (this.coordinates.getHeight() > 100)
                     this.coordinates.setHeight(100);
-                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): AHH THE SUN IS BLINDING ME!");
+                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): IT'S SUNNY AND YOU'RE FUNNY!");
                 break;
             case "RAIN":
                 this.coordinates.setLatitude(this.coordinates.getLatitude() + 5);
-                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): WHO NEEDS WINDSHELD WIPERS FOR RAIN AT THIS SPEED HAHA");
+                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): RAIN DROP, DROP TOP!");
                 break;
             case "FOG":
                 this.coordinates.setLatitude(this.coordinates.getLatitude() + 1);
-                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): CRAP I CANT SEE ANYTHING IN THIS FOG!");
+                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): FOGGY FOG CAN'T SEE A THING!");
                 break;
             case "SNOW":
                 this.coordinates.setHeight(this.coordinates.getHeight() - 12);
-                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): THE SNOW IS FREEZING MY WINDOWS THEY ARE GOING TO CRACK");
+                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): JOHN SNOW GAME OF THRONES CALLED THEY WANT THEIR SNOW BACK!!");
                 break;
             default:
-                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): ALL HOPE IS LOST I CAN't COUNTACT THE WEATHER TOWER");
+                WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + "): CAN'T CONNECT TO THE WEATHER TOWER");
                 break;
         }
         if (this.coordinates.getHeight() <= 0) {
             WriteToTXT.getWriteToTXT().writeTXT("JetPlane#" + this.name + "(" + this.id + ") landing.");
-            WriteToTXT.getWriteToTXT().writeTXT("Tower  says: JetPlane#" + this.name + "(" + this.id + ")" + " unregistered from weather tower.");
+            WriteToTXT.getWriteToTXT().writeTXT("Tower  says: JetPlane#" + this.name + "(" + this.id + ")" + " UNREGISTERED FROM THE WEATHER TOWER.");
         }
     }
 
     public	void	registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
-        WriteToTXT.getWriteToTXT().writeTXT("Tower says: JetPlane#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+        WriteToTXT.getWriteToTXT().writeTXT("Tower says: JetPlane#" + this.name + "(" + this.id + ")" + " REGISTERED TO THE WEATHER TOWER.");
         this.weatherTower.register(this);
     }
 }
